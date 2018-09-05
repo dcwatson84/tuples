@@ -1,4 +1,4 @@
-package org.tuples;
+package org.thshsh.tuples;
 
 //Just for kicks :)
 public class Zerople extends Tuple {

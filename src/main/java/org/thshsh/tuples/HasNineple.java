@@ -1,4 +1,4 @@
-package org.tuples;
+package org.thshsh.tuples;
 
 public interface HasNineple<A,B,C,D,E,F,G,H,I> extends HasEightple<A, B, C, D, E, F, G, H> {
 

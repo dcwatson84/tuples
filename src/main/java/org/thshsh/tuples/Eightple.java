@@ -1,10 +1,10 @@
-package org.tuples;
+package org.thshsh.tuples;
 
-public class Fiveple <A,B,C,D,E> extends Tuple implements HasFiveple<A, B, C, D, E>{
+public class Eightple<A,B,C,D,E,F,G,H> extends Tuple implements HasEightple<A, B, C, D, E, F, G, H> {
 
-	public static int SIZE = 5;
+	public static int SIZE = 8;
 	
-	public Fiveple() {
+	public Eightple() {
 		super(SIZE);
 	}
 	
@@ -32,5 +32,21 @@ public class Fiveple <A,B,C,D,E> extends Tuple implements HasFiveple<A, B, C, D,
 	public E getFive() {
 		return (E) get(4);
 	}
+	
+	@SuppressWarnings("unchecked")
+	public F getSix() {
+		return (F) get(5);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public G getSeven() {
+		return (G) get(6);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public H getEight() {
+		return (H) get(7);
+	}
+	
 	
 }

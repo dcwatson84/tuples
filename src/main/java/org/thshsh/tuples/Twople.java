@@ -1,4 +1,4 @@
-package org.tuples;
+package org.thshsh.tuples;
 
 public class Twople<A,B> extends Tuple implements HasTwople<A, B> {
 	

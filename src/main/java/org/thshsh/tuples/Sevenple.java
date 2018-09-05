@@ -1,13 +1,13 @@
-package org.tuples;
+package org.thshsh.tuples;
 
-public class Tenple<A,B,C,D,E,F,G,H,I,J> extends Tuple implements HasTenple<A, B, C, D, E, F, G, H, I, J> {
+public class Sevenple <A,B,C,D,E,F,G> extends Tuple implements HasSevenple<A, B, C, D, E, F, G>{
+
+	public static int SIZE = 7;
 	
-	public static int SIZE = 10;
-	
-	public Tenple() {
+	public Sevenple() {
 		super(SIZE);
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);
@@ -43,19 +43,4 @@ public class Tenple<A,B,C,D,E,F,G,H,I,J> extends Tuple implements HasTenple<A, B
 		return (G) get(6);
 	}
 	
-	@SuppressWarnings("unchecked")
-	public H getEight() {
-		return (H) get(7);
-	}
-	
-	@SuppressWarnings("unchecked")
-	public I getNine() {
-		return (I) get(8);
-	}
-	
-	@SuppressWarnings("unchecked")
-	public J getTen() {
-		return (J) get(9);
-	}
-
 }

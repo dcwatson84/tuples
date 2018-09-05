@@ -1,4 +1,4 @@
-package org.tuples;
+package org.thshsh.tuples;
 
 public interface HasFiveple<A,B,C,D,E> extends HasFourple<A, B, C, D> {
 	

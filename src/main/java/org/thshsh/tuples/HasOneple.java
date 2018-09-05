@@ -1,4 +1,4 @@
-package org.tuples;
+package org.thshsh.tuples;
 
 public interface HasOneple<A> extends HasTuple {
 

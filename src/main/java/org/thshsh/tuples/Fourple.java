@@ -1,10 +1,10 @@
-package org.tuples;
+package org.thshsh.tuples;
 
-public class Threeple<A,B,C> extends Tuple implements HasThreeple<A, B, C>{
+public class Fourple <A,B,C,D> extends Tuple implements HasFourple<A, B, C, D> {
 
-	public static int SIZE = 3;
+	public static int SIZE = 4;
 	
-	public Threeple() {
+	public Fourple() {
 		super(SIZE);
 	}
 	
@@ -21,6 +21,11 @@ public class Threeple<A,B,C> extends Tuple implements HasThreeple<A, B, C>{
 	@SuppressWarnings("unchecked")
 	public C getThree() {
 		return (C) get(2);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public D getFour() {
+		return (D) get(3);
 	}
 
 }
