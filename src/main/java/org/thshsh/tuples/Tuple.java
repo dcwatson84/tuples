@@ -11,14 +11,14 @@ public abstract class Tuple {
 	}
 	
 	public <A extends Tuple> A toTuple(Class<A> clazz) {
-		A tuple;
 		try {
-			tuple = clazz.newInstance();
+			A tuple = clazz.newInstance();
+			Object[] ar = Arrays.copyOf(objects, tuple.getLength());
+			tuple.set(ar);
+			return tuple;
 		} 
 		catch (InstantiationException e) {throw new IllegalArgumentException(e);} 
 		catch (IllegalAccessException e) {throw new IllegalArgumentException(e);}
-		
-		return tuple;
 	}
 	
 	public void set(Object... setObjects) {
@@ -57,6 +57,10 @@ public abstract class Tuple {
 		return true;
 	}
 
+	public int getLength() {
+		return objects.length;
+	}
+	
 	@Override
 	public String toString() {
 		return " [objects=" + Arrays.toString(objects) + "]";
