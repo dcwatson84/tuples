@@ -8,6 +8,11 @@ public class Oneple<A> extends Tuple implements HasOneple<A> {
 		super(SIZE);
 	}
 	
+	public Oneple(A a) {
+		this();
+		this.set(a);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

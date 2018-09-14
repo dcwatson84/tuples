@@ -8,6 +8,11 @@ public class Sixple<A,B,C,D,E,F> extends Tuple implements HasSixple<A, B, C, D, 
 		super(SIZE);
 	}
 	
+	public Sixple(A a,B b,C c,D d,E e, F f) {
+		this();
+		this.set(a,b,c,d,e,f);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

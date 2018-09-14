@@ -8,6 +8,11 @@ public class Nineple<A,B,C,D,E,F,G,H,I> extends Tuple implements HasNineple<A, B
 		super(SIZE);
 	}
 	
+	public Nineple(A a,B b,C c,D d,E e, F f,G g, H h,I i) {
+		this();
+		this.set(a,b,c,d,e,f,g,h,i);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

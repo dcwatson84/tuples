@@ -8,6 +8,11 @@ public class Twople<A,B> extends Tuple implements HasTwople<A, B> {
 		super(SIZE);
 	}
 	
+	public Twople(A a,B b) {
+		this();
+		this.set(a,b);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

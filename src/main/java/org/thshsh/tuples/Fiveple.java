@@ -8,6 +8,11 @@ public class Fiveple <A,B,C,D,E> extends Tuple implements HasFiveple<A, B, C, D,
 		super(SIZE);
 	}
 	
+	public Fiveple(A a,B b,C c,D d,E e) {
+		this();
+		this.set(a,b,c,d,e);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

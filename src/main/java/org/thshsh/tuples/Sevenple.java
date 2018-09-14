@@ -8,6 +8,11 @@ public class Sevenple <A,B,C,D,E,F,G> extends Tuple implements HasSevenple<A, B,
 		super(SIZE);
 	}
 	
+	public Sevenple(A a,B b,C c,D d,E e, F f,G g) {
+		this();
+		this.set(a,b,c,d,e,f,g);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

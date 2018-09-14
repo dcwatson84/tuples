@@ -7,6 +7,11 @@ public class Tenple<A,B,C,D,E,F,G,H,I,J> extends Tuple implements HasTenple<A, B
 	public Tenple() {
 		super(SIZE);
 	}
+	
+	public Tenple(A a,B b,C c,D d,E e, F f,G g, H h,I i,J j) {
+		this();
+		this.set(a,b,c,d,e,f,g,h,i,j);
+	}
 
 	@SuppressWarnings("unchecked")
 	public A getOne() {

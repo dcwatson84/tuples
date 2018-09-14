@@ -8,6 +8,11 @@ public class Eightple<A,B,C,D,E,F,G,H> extends Tuple implements HasEightple<A, B
 		super(SIZE);
 	}
 	
+	public Eightple(A a,B b,C c,D d,E e, F f,G g, H h) {
+		this();
+		this.set(a,b,c,d,e,f,g,h);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

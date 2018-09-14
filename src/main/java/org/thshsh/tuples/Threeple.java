@@ -8,6 +8,11 @@ public class Threeple<A,B,C> extends Tuple implements HasThreeple<A, B, C>{
 		super(SIZE);
 	}
 	
+	public Threeple(A a,B b,C c) {
+		this();
+		this.set(a,b,c);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);

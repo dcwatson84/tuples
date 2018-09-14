@@ -8,6 +8,11 @@ public class Fourple <A,B,C,D> extends Tuple implements HasFourple<A, B, C, D> {
 		super(SIZE);
 	}
 	
+	public Fourple(A a,B b,C c,D d) {
+		this();
+		this.set(a,b,c,d);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public A getOne() {
 		return (A) get(0);
