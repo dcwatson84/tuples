@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.thshsh</groupId>
 	<artifactId>tuples</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>tuples</name>
 	<description>A Java library for static tuple classes</description>
 	<developers>
@@ -25,8 +25,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<distributionManagement>
-		 <snapshotRepository>
-		 	<id>thshsh-snapshots</id>
+		<snapshotRepository>
+			<id>thshsh-snapshots</id>
 			<url>http://www.thshsh.org/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 		<repository>
@@ -79,6 +79,10 @@
 							<goal>sign</goal>
 						</goals>
 						<configuration>
+							<gpgArguments>
+								<arg>--pinentry-mode</arg>
+								<arg>loopback</arg>
+							</gpgArguments>
 							<keyname>org.thshsh</keyname>
 							<passphrase>${org.thshsh.passphrase}</passphrase>
 							<excludes>
