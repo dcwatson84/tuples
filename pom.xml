@@ -7,6 +7,7 @@
 	<version>0.0.1</version>
 	<name>tuples</name>
 	<description>A Java library for static tuple classes</description>
+	<packaging>jar</packaging>
 	<developers>
 		<developer>
 			<name>The Shoe Shiner</name>
@@ -26,12 +27,12 @@
 	</properties>
 	<distributionManagement>
 		<snapshotRepository>
-			<id>thshsh-snapshots</id>
-			<url>http://www.thshsh.org/nexus/content/repositories/snapshots/</url>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>thshsh-releases</id>
-			<url>http://www.thshsh.org/nexus/content/repositories/releases/</url>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
 		</repository>
 	</distributionManagement>
 	<scm>
@@ -41,6 +42,17 @@
 	</scm>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.6.7</version>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -75,16 +87,11 @@
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
+						<phase>verify</phase>
 						<goals>
 							<goal>sign</goal>
 						</goals>
 						<configuration>
-							<gpgArguments>
-								<arg>--pinentry-mode</arg>
-								<arg>loopback</arg>
-							</gpgArguments>
-							<keyname>org.thshsh</keyname>
-							<passphrase>${org.thshsh.passphrase}</passphrase>
 							<excludes>
 								<exclude>*.asc</exclude>
 							</excludes>
@@ -94,4 +101,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<url>https://github.com/theshoeshiner/tuples</url>
 </project>
